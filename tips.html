@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farming Tips - Lesothohub</title>
+  <style>
+    /* ====== GLOBAL STYLES ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #fdfcf2;
+      color: #333;
+    }
+
+    /* ====== NAVBAR ====== */
+    nav {
+      background-color: #ffeb99;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #2e4600;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #2e4600;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #f77f00;
+    }
+
+    /* ====== TIPS SECTION ====== */
+    .tips-section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    .tips-section h1 {
+      text-align: center;
+      color: #2e4600;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .tip-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .tip-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .tip-card h3 {
+      color: #f77f00;
+      margin-bottom: 10px;
+    }
+
+    .tip-card p {
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background-color: #2e4600;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <div class="logo">🌾 LesothoHub</div>
+    <ul>
+      <li><a href="index.html"> Home</a></li>
+      <li><a href="products.html"> Products</a></li>
+      <li><a href="about.html"> About Us</a></li>
+      <li><a href="contact.html"> Contact</a></li>
+      <li><a href="tips.html">Tips</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== TIPS SECTION ===== -->
+  <section class="tips-section">
+    <h1>💡 Farming & Organic Living Tips</h1>
+
+    <div class="tips-grid">
+
+      
+      <section class="tips-section">
+  <div class="tips-grid">
+
+    <! Tip 1 -->
+    <div class="tip-card">
+      <a href="https://www.thespruce.com/healthy-soil-and-how-to-make-it-2539853" target="_blank">
+        <img src="healthy soil.jpeg" alt="Soil Health">
+        <h3>🌱 Improve Soil Health</h3>
+      </a>
+      <p>Use compost, crop rotation, and cover crops to boost soil fertility naturally and reduce chemical use.</p>
+    </div>
+
+    <!-- Tip 2 -->
+    <div class="tip-card">
+      <a href="https://atlas-scientific.com/blog/uses-of-water-in-agriculture/" target="_blank">
+        <img src="growing crop.jpeg" alt="Watering">
+        <h3>💧 Smart Watering</h3>
+      </a>
+      <p>Adopt drip irrigation to save water and ensure crops receive consistent moisture.</p>
+    </div>
+
+    <!-- Tip 3 -->
+    <div class="tip-card">
+      <a href="https://www.contractors.com/y/contractor-search/?adid=9984936&utm_source=bing&utm_medium=cpc&category=Pest+Control&subcategory=Bedbugs&subid=410534872|1289727566537211|kwd-80608220002511|&cid=80608077435597&mkwid=mbUb7Zr4|dc|o|p&HL=Request+Your+Pest+Control+Estimates&kwdid=&pubclickid=ee131880c69516b66906702a1b7930eb&msclkid=ee131880c69516b66906702a1b7930eb" target="_blank">
+        <img src="pest control.jpeg " alt="Pest Control">
+        <h3> Natural Pest Control</h3>
+      </a>
+      <p>Encourage beneficial insects like ladybugs to reduce pests instead of relying on pesticides.</p>
+    </div>
+
+    <!-- Tip 4 -->
+    <div class="tip-card">
+      <a href="https://cpdonline.co.uk/knowledge-base/food-hygiene/importance-of-healthy-eating/" target="_blank">
+        <img src="healthy eating.jpeg" alt="Healthy Eating">
+        <h3> Eat Organic</h3>
+      </a>
+      <p>Support your health by eating fresh organic produce free from harmful chemicals.</p>
+    </div>
+
+    <!-- Tip 5 -->
+    <div class="tip-card">
+      <a href="https://www.croptrust.org/mission-1/why-we-need-crop-diversity/" target="_blank">
+        <img src="" alt="crop diversity.jpeg">
+        <h3>🌾 Crop Diversity</h3>
+      </a>
+      <p>Plant different crops to increase resilience against pests, diseases, and climate challenges.</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 lesotho Hub | Growing together for a better tomorrow 🌍</p>
+  </footer>
+
+</body>
+</html>

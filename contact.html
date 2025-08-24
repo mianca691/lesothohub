@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Lesotho Hub</title>
+  <style>
+    /* ====== GLOBAL STYLES ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #fdfcf2;
+      color: #333;
+    }
+
+    /* ====== NAVBAR ====== */
+    nav {
+      background-color: #ffeb99;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #2e4600;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #2e4600;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #f77f00;
+    }
+
+    /* ====== CONTACT SECTION ====== */
+    .contact-container {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-info {
+      background: #fff4d1;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-info h2 {
+      color: #2e4600;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .contact-info strong {
+      color: #f77f00;
+    }
+
+    /* ====== FORM ====== */
+    .contact-form {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-form h2 {
+      color: #2e4600;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    button {
+      background-color: #f77f00;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e06d00;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background-color: #2e4600;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 900px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <div class="logo">🌾 LesothoHub</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html"> Products</a></li>
+      <li><a href="about.html"> About Us</a></li>
+      <li><a href="contact.html"> Contact</a></li>
+      <li><a href="tips.html"> Tips</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact-container">
+
+    <!-- LEFT SIDE: CONTACT INFO -->
+    <div class="contact-info">
+      <h2>📍 Get in Touch</h2>
+      <p><strong>Email:</strong> support@LesothoHub.com</p>
+      <p><strong>Phone:</strong> +266 5000 1234</p>
+      <p><strong>Location:</strong> Maseru, Lesotho 🇱🇸</p>
+      <p>
+        Farmers can also submit <strong>claims & product issues</strong> here.  
+        We’ll get back within 48 hours.  
+      </p>
+    </div>
+
+    <!-- RIGHT SIDE: FORM -->
+    <div class="contact-form">
+      <h2>Send us a Message</h2>
+      <form>
+        <input type="text" placeholder="Your Full Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject (e.g. Product Issue, General Query)" required>
+        <textarea placeholder="Write your message here..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Lesotho Hub | Contact us for support 🌍</p>
+  </footer>
+
+</body>
+</html>

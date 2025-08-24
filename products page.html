@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LesothoHub - Products</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: url('FARMINGSCENE.JPEG') no-repeat center center/cover;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffeb99;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      color: darkgreen;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: darkgreen;
+      font-weight: bold;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 2rem;
+      color: darkgreen;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+      width: 100%;
+    }
+
+    .product-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product-card h3 {
+      margin: 15px 0 10px;
+      font-size: 1.2rem;
+      color: darkgreen;
+    }
+
+    .product-card p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: darkgreen;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>LESOTHOHUB</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="tips.html">Tips</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="page-title">Products</h2>
+
+  <!-- PRODUCTS GRID -->
+  <div class="products" id="products-container"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 LesothoHub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // All products
+    const products = {
+      organic: [
+        { name: "Organic Apples", price: "M25", image: "apple.jpg" },
+        { name: "Organic Carrots", price: "M30", image: "carrot.jpg" },
+        { name: "Organic Tomatoes", price: "M40", image: "tomato.jpg" },
+        { name: "Organic Spinach", price: "M20", image: "spinach.jpg" },
+      ],
+      livestock: [
+        { name: "Beef Cattle", price: "M5000", image: "cattle.jpg" },
+        { name: "Goats", price: "M1200", image: "goat.jpg" },
+        { name: "Sheep", price: "M1500", image: "sheep.jpg" },
+        { name: "Chickens", price: "M100", image: "chicken.jpg" },
+      ],
+      vegetables: [
+        { name: "Potatoes", price: "M50 per sack", image: "potato.jpg" },
+        { name: "Green Beans", price: "M25 per bundle", image: "beans.jpg" },
+        { name: "Cabbages", price: "M30", image: "cabbage.jpg" },
+        { name: "Onions", price: "M40", image: "onion.jpg" },
+      ],
+      mixed: [
+        { name: "Milk", price: "M15", image: "milk.jpg" },
+        { name: "Cheese", price: "M45", image: "cheese.jpg" },
+        { name: "Eggs", price: "M60", image: "eggs.jpg" },
+        { name: "Honey", price: "M75", image: "honey.jpg" },
+      ]
+    };
+
+    // Get category from URL (like ?category=organic)
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get("category");
+
+    const container = document.getElementById("products-container");
+    const pageTitle = document.getElementById("page-title");
+
+    if (category && products[category]) {
+      pageTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1) + " Products";
+      products[category].forEach(product => {
+        container.innerHTML += `
+          <div class="product-card">
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>Price: ${product.price}</p>
+          </div>
+        `;
+      });
+    } else {
+      // Show all products if no category
+      pageTitle.textContent = "All Products";
+      Object.keys(products).forEach(cat => {
+        products[cat].forEach(product => {
+          container.innerHTML += `
+            <div class="product-card">
+              <img src="${product.image}" alt="${product.name}">
+              <h3>${product.name}</h3>
+              <p>Price: ${product.price}</p>
+            </div>
+          `;
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
